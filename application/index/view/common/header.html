@@ -1,0 +1,32 @@
+<!--网站头 导航-->
+	<div class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index" class="navbar-brand"><!--网站Logo--></a>
+			</div>
+			<!--网站导航-->
+			<label class="visible-xs-inline-block" id="toggle-label" for="toggle-checkbox">MENU</label>
+			<input class="hidden" id="toggle-checkbox" type="checkbox">
+			<div class="hidden-xs">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index">首页</a></li>
+				</ul><!--<p>{$Think.server.HTTP_HOST}</p>-->
+				<!--<?php
+				session_start();
+				if(!isset($_SESSION['username'])){
+					echo '
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="admin/article.login.php">登陆</a></li>
+						<li><a href="">注册</a></li>
+					</ul>';
+				}else{
+					//TODO
+					echo'
+					<ul class="nav navbar-nav navbar-right">
+						'.$_SESSION['username'].'
+					</ul>';
+				}
+				?>-->
+			</div>
+		</div>
+	</div>

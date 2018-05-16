@@ -1,0 +1,22 @@
+{extend name="common/index_show" /}
+
+{block name="webtitle"}
+	{$webtitle}
+{/block}
+
+{block name="webshow"}
+	<!--网站内容主体-->
+	{if $count>0}
+	<div class="article">
+		<div class="title"><p><!--文章标题-->{$data['title']}</p></div>
+		<div class="info">
+			<!--文章信息（作者、时间）-->
+			作者：<span><!--作者-->{$data['author']}</span><br/>
+			发布于<span><!--时间-->{$data['creation_time']}</span>
+		</div>
+		<div class="content"><p><!--文章内容-->{$data['content']}</p></div>
+	</div>	
+	{else /}
+		文章不存在
+	{/if}
+{/block}

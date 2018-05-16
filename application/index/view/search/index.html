@@ -1,0 +1,22 @@
+{extend name="common/index_show" /}
+
+{block name="webtitle"}
+	搜索结果 - AlbertWjw
+{/block}
+
+{block name="webshow"}
+	{/*搜索结果显示*/}
+	关键字：'{$key}'  有{$count}条搜索结果:
+	{foreach $data as $key => $vo}
+		<div class="article-list-item clearfux">
+			<div class="title"><!--文章标题-->{$vo.title}</div>
+			<div class="intro"><!--文章简介-->{$vo.description}</div>
+			<div class="info">
+				<!--文章信息（作者、时间）-->
+				作者：<span><!--作者-->{$vo.author}</span><br/>
+				<span><!--发布时间-->{$vo.creation_time}</span>
+			</div>
+			<a href="page/{$vo.id}.html">查看详情</a>
+		</div>
+	{/foreach}
+{/block}
