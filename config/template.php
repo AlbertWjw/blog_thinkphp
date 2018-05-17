@@ -35,7 +35,7 @@ return [
     //模板输出替换,全局配置
     'tpl_replace_string'  =>  [
         '__STATIC__'  =>  '/static',
-        '__JS__'      =>  '/static/JS',
+        '__JS__'      =>  '/static/js',
         '__CSS__'     =>  '/static/css'
     ]
 ];

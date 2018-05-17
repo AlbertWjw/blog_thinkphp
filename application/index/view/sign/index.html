@@ -1,0 +1,48 @@
+{extend name="common/index_show" /}
+
+{block name="webtitle"}
+	sign {$key} - AlbertWjw
+{/block}
+
+{block name="webshow"}
+	{/*登录/注册框显示*/}
+	{if condition="($key == 'up')"}
+	<div class="col-md-6"></div>
+	<div class="col-md-6 formdiv">
+		<form id="loginform" method="POST" action="article.login.handle.php">
+			<p class="formtext">登陆</p>
+
+			<label>用户名</label>
+			<input data_rule='pattern:"^[a-zA-Z0-9]*$"|maxlenght:16|minlenght:2' id="user" class="form-control" type="text" name="username" />
+			<p id="uhint" class="formhint">用户名格式错误</p>
+
+			<label>密码</label>
+			<input data_rule='maxlenght:16|minlenght:2' id="paw" class="form-control" type="password" name="username" />
+			<p id="zhint" class="formhint">密码格式错误</p>
+
+			<input class="btn btn-default btn-block" id="btnsub" type="submit" name="password" value="登陆" />
+		</form>
+	</div>
+	{else /}
+	<div class="col-md-6"></div>
+	<div class="col-md-6 formdiv">
+		<form id="loginform" method="POST" action="article.login.handle.php">
+			<p class="formtext">注册</p>
+
+			<label>用户名</label>
+			<input data_rule='pattern:"^[a-zA-Z0-9]*$"|maxlenght:16|minlenght:2' id="user" class="form-control" type="text" name="username" />
+			<p id="uhint" class="formhint">用户名格式错误</p>
+
+			<label>密码</label>
+			<input data_rule='maxlenght:16|minlenght:2' id="paw" class="form-control" type="password" name="username" />
+			<p id="zhint" class="formhint">密码格式错误</p>
+
+			<label>邮箱</label>
+			<input data_rule='pattern:"^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$"' id="email" class="form-control" type="email" name="useremail" />
+			<p id="ehint" class="formhint">邮箱格式错误</p>
+
+			<input class="btn btn-default btn-block" id="btnsub" type="submit" name="password" value="注册" />
+		</form>
+	</div>
+	{/if}
+{/block}

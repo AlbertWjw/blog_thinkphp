@@ -16,6 +16,8 @@ Route::get('think', function () {
 Route::get('hello/:name', 'index/hello');
 
 return [
+	"index"    => "index/Index/index",
 	"page/:id" => "index/Page/index",
-	"search" => "index/Search/index"
+	"search"   => "index/Search/index",
+	"sign"     => "index/Sign/index"
 ];

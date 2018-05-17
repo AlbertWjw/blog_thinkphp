@@ -7,10 +7,22 @@ use app\index\model\Article;
 class Page extends Controller{
 	public function index($id){
 
+		$is_sign = Session("?id");
+		$user_data = [];
+		if($is_sign){
+			$user_data =[
+				"id"        => Session("id"),
+				"username"  => Session("username"),
+				"img"       => Session("img"),
+			];
+		}
+
 		$data = Article::where("id = $id")->select();
 		if(count($data)>0){
 		return $this->fetch('index',[
 			"webtitle"    => "$id - AlbertWjw",    //网页标题
+			"is_sign"     => $is_sign,
+			"user_data"   => $user_data,
 			"data"       => $data[0],        //文章标题
 			"count"      => count($data)
 
