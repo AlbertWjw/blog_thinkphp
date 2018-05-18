@@ -19,5 +19,7 @@ return [
 	"index"    => "index/Index/index",
 	"page/:id" => "index/Page/index",
 	"search"   => "index/Search/index",
-	"sign"     => "index/Sign/index"
+	"sign"     => "index/Sign/index",
+	"ajaxin"     => "index/Sign/signin",
+
 ];
