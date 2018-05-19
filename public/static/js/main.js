@@ -70,7 +70,7 @@ $(function(){
 		//输入信息验证，如果没问题进行 登陆/注册 操作
 		if(email.length<=0){ //登陆
 			if($('#uhint').css("display") !=="block" || $('#zhint').css("display") !=="block"){
-				$.ajax("ajaxup", {
+				$.ajax("ajaxin", {
 					method:'post',
 					data:{
 						username:user.val(),
@@ -95,7 +95,7 @@ $(function(){
 		}else{//注册
 			if($('#uhint').css("display") !=="block" || $('#zhint').css("display") !=="block" ||
 			 $('#thint').css("display") !=="block" || $('#ehint').css("display") != "block"){
-				$.ajax("ajaxin", {
+				$.ajax("ajaxup", {
 					method:'post',
 					data:{
 						username:user.val(),

@@ -31,7 +31,7 @@ class Sign extends Controller{
 	}
 
 	//登录ajax
-	public function signup(){
+	public function signin(){
 		$username = input("post.username");
 		$password = input("post.password");
 		$password = md5($password);
@@ -48,7 +48,7 @@ class Sign extends Controller{
 	}
 
 	//注册ajax
-	public function signin(){
+	public function signup(){
 		$username = input("post.username");
 		$password = input("post.password");
 		$email = input("post.email");
