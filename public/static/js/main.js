@@ -23,7 +23,7 @@ $(function(){
 		}
 	})
 	paw.on('blur',function(){
-		if(paw.val().length>16 || paw.val().length<2){
+		if(paw.val().length>16 || paw.val().length<6){
 			$('#zhint').css("display","block");
 		}
 		else{

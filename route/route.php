@@ -22,6 +22,6 @@ return [
 	"sign"     => "index/Sign/index",
 	"ajaxup"     => "index/Sign/signup",
 	"ajaxin"     => "index/Sign/signin",
-
+	"manage"     => "index/Manage/index",
 
 ];

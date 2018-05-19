@@ -8,9 +8,6 @@ use app\index\model\Article;
 class Index extends Controller{
 	public function index(){
 
-		//Session("id",1);
-		//Session("username","666");
-
 		$is_sign = Session("?id");
 		$user_data = [];
 		if($is_sign){
