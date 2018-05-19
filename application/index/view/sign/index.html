@@ -34,8 +34,12 @@
 			<p id="uhint" class="formhint">用户名格式错误</p>
 
 			<label>密码</label>
-			<input data_rule='maxlenght:16|minlenght:2' id="paw" class="form-control" type="password" name="username" />
+			<input data_rule='maxlenght:16|minlenght:2' id="paw" class="form-control" type="password" name="password" />
 			<p id="zhint" class="formhint">密码格式错误</p>
+
+			<label>确认密码</label>
+			<input data_rule='maxlenght:16|minlenght:2' id="paw2" class="form-control" type="password" name="password2" />
+			<p id="thint" class="formhint">两次密码不同</p>
 
 			<label>邮箱</label>
 			<input data_rule='pattern:"^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$"' id="email" class="form-control" type="email" name="useremail" />

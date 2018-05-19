@@ -20,6 +20,8 @@ return [
 	"page/:id" => "index/Page/index",
 	"search"   => "index/Search/index",
 	"sign"     => "index/Sign/index",
+	"ajaxup"     => "index/Sign/signup",
 	"ajaxin"     => "index/Sign/signin",
+
 
 ];

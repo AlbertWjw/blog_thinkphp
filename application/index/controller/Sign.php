@@ -31,11 +31,10 @@ class Sign extends Controller{
 	}
 
 	//登录ajax
-	public function signin(){
+	public function signup(){
 		$username = input("post.username");
-		//dump($username);
 		$password = input("post.password");
-		//dump(User::where("username = '$username'")->select());
+		$password = md5($password);
 		$data = User::where("username = '$username' and password = '$password'")->select();
 		//dump($data);
 		if(count($data) !=0){
@@ -46,6 +45,31 @@ class Sign extends Controller{
 		}
 		else
 			return '登录失败';
+	}
+
+	//注册ajax
+	public function signin(){
+		$username = input("post.username");
+		$password = input("post.password");
+		$email = input("post.email");
+		$data = User::where("username = '$username'")->select();
+		if(count($data)>0){
+			return "用户名已存在";
+		}else{
+			$data = User::create([
+				"username" => $username,
+				"password" => md5($password),
+				"email"  => $email,
+				"creation_time" => date("Y-m-d H:m:s",time()),
+			]);
+			if(count($data) ==1){
+				Session("id",$data['id']);
+				Session("username",$data['username']);
+				return "注册成功";
+			}else{
+				return '注册失败';
+			}
+		}
 	}
 }
 ?>
