@@ -7,7 +7,6 @@ use app\index\model\Article;
 
 class Index extends Controller{
 	public function index(){
-
 		$is_sign = Session("?id");
 		$user_data = [];
 		if($is_sign){
