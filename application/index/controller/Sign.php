@@ -7,7 +7,6 @@ use app\index\model\User;
 
 class Sign extends Controller{
 	public function index(){
-
 		$is_sign = Session("?id");
 		$user_data = [];
 		if($is_sign){
@@ -67,16 +66,25 @@ class Sign extends Controller{
 				"username" => $username,
 				"password" => md5($password),
 				"email"  => $email,
+				"peopleimg" => "headimg.PNG",
 				"creation_time" => date("Y-m-d H:m:s",time()),
 			]);
 			if(count($data) ==1){
 				Session("id",$data['id']);
 				Session("username",$data['username']);
+				Session("img",$data[0]['peopleimg']);
 				return "注册成功";
 			}else{
 				return '注册失败';
 			}
 		}
+	}
+
+	public function exitSign(){
+		$is_sign = Session("?id");
+		if(!$is_sign) return "<script>alert('请先登陆'');window.location.href='$url'</script>";
+		Session(null);
+		return "<script>window.location.href='index'</script>";
 	}
 }
 ?>

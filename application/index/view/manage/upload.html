@@ -1,0 +1,15 @@
+{extend name="common/index_show" /}
+
+{block name="webtitle"}
+	文章管理 - AlbertWjw
+{/block}
+{block name="headright"}
+{/block}
+
+{block name="webshow"}
+	<form action="handleUpload" method="POST" enctype="multipart/form-data">
+		<!--限制上传文件大小(客户端限制)<input type="hidden" name="MAX_FILE_SIZE" value='1'>-->
+		<input type="file" name="img" /><!--accept="image/jpeg"属性限制文件类型（客户端限制）-->
+		<input type="submit" name="submit" />
+	</form>
+{/block}

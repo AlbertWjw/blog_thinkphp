@@ -22,6 +22,15 @@ return [
 	"sign"     => "index/Sign/index",
 	"ajaxup"     => "index/Sign/signup",
 	"ajaxin"     => "index/Sign/signin",
+	"imgUpload"  => "index/manage/upload",
+	"handleUpload"  => "index/manage/handleUpload",
 	"manage"     => "index/Manage/index",
-
+	"add"        => "index/Manage/addArticle",
+	"handleAdd"  => "index/Manage/addHandle",
+	"delArticle" => "index/Manage/delArticle",
+	"modifyArticle" => "index/Manage/modifyArticle",
+	"handleModify" => "index/Manage/modifyHandle",
+	"exitSign"  => "index/Sign/exitSign",
+	"about"     => "index/Other/about",
+	"contact"  => "index/Other/contact",
 ];
